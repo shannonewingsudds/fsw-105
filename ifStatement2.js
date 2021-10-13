@@ -6,10 +6,14 @@
 //Ideally, you will declare two variables for this requirement, and assign "cat" and "dog" values to those two variables respectively.  
 //Next, you will need to compare those values within an if/else statement.
 
+var p = 1;
 const i = 5;
 const animalC = "cat";
 const animalD = "dog";
-
+var person = {
+    firstName: "Bobby",
+    age: 12,
+}
 if (i > 3) {
     console.log("i is greater than 3");
 }
@@ -29,11 +33,7 @@ else{
 //Using the person object, write an if statement that prints <theNameOfThePersonInObject> is allowed to go to the movie if they are old enough 
 //(18 or older), and,  <theNameOfThePersonInObject> is not allowed to go to the movie if they are not older than 18.  Hint:  you will need to use person.age 
 //in an if statement for this requirement.
-var person = {
-    firstName: "Bobby",
-    age: 12,
 
-}
 if (person.age >= 18){
     console.log(person.firstName + " " + "is allowed to go to the movies");
 }
@@ -58,7 +58,7 @@ if (person.age > 18 && person.firstName.charAt(0) == "B") {
     console.log(person.firstName + " " + "is only allowed because his name starts with B and he is older than 18");
 }
 else{
-    console.log(person.firstName + " " + "is not allowed because his name starts with B and he is not older than 18");
+    console.log(person.firstName + " " + "is not allowed because his name starts with B but he is not older than 18");
 
 }
 //Silver Medal (10 points):
@@ -66,18 +66,18 @@ else{
 //prints "loose" or "abstract" if 1 equals "1" without type checking, and prints "not equal at all" if it doesn't print the other stuff.
 //Write an if statement that prints "yes" if 1 is less than or equal to 2 AND (&&) 2 is equal to 4.
 
-var i = 1;
 
-if (i === 1){
+
+if (p === 1){
     console.log("strict")
 }
-else if (i == "1"){
+else if (p == "1"){
     console.log("loose");
 }
 else {
     console.log("not equal at all");
 }
-if (i <= 2 && (2 == 4)){
+if (p <= 2 && (2 == 4)){
     console.log("yes");
 
 }
