@@ -60,3 +60,13 @@ for (var i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++){
 //4. Create a for loop that iterates through 101 numbers (from 0 - 100). If the current iteration is an Odd number, 
 //print "Odd" to the console, otherwise print "Even".
 console.log("----Requirement #4----");
+var j = 0;
+for (; j <= 101; j++){
+    if (j %2 == 0){
+        console.log(j + " Even");
+    }
+    else{
+        console.log(j + " Odd");
+
+    }        
+}
