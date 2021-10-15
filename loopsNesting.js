@@ -50,18 +50,24 @@ for (var i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++){
 console.log("----Requirement #3----");
 for (var i = 0; i < peopleWhoWantToSeeMadMaxFuryRoad.length; i++){
     if (peopleWhoWantToSeeMadMaxFuryRoad[i].age >= 18 && peopleWhoWantToSeeMadMaxFuryRoad[i].gender === "female"){
-        console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + "is old enough. SHE'S good to see Mad Max Fury Road.");
+        console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is old enough. SHE'S good to see Mad Max Fury Road.");
+    }
+    else if (peopleWhoWantToSeeMadMaxFuryRoad[i].age < 18 && peopleWhoWantToSeeMadMaxFuryRoad[i].gender === "female"){
+        console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is not old enough to see Mad Max Fury Road, don't let her in.");
+    }
+    else if (peopleWhoWantToSeeMadMaxFuryRoad[i].age >= 18 && peopleWhoWantToSeeMadMaxFuryRoad[i].gender === "male"){
+        console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is old enough to see Mad Max Fury Road, HE'S good to see Mad Max Fury Road.");
     }
     else{
-        console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + "is not old enough to see Mad Max Fury Road, don't let HIM in.");
+        console.log(peopleWhoWantToSeeMadMaxFuryRoad[i].name + " is not old enough to see Mad Max Fury Road, don't let him in.");
     }
 }
 
 //4. Create a for loop that iterates through 101 numbers (from 0 - 100). If the current iteration is an Odd number, 
 //print "Odd" to the console, otherwise print "Even".
 console.log("----Requirement #4----");
-var j = 0;
-for (; j <= 101; j++){
+var j;
+for (j= 1; j <= 101; j++){
     if (j %2 == 0){
         console.log(j + " Even");
     }
