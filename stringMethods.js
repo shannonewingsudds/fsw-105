@@ -7,13 +7,16 @@ function capitalizeAndLowercase(str){
 }
 
 console.log (capitalizeAndLowercase("Hello"));  // => HELLOhello
-console.log(capitalizeAndLowercase("HelloHowAreYou"));   // => HELLOHOWAREYOUhellohowareyou
+console.log (capitalizeAndLowercase("HelloHowAreYou"));   // => HELLOHOWAREYOUhellohowareyou
 
 //2. Make a function that returns a number half the length and rounded down. You'll need to use Math.floor()
+console.log("    ");
 console.log("----stringRequirement #2----");
 
-
-
+function findMiddleIndex(str1){
+    let middleIndex = str1.length;
+    console.log (math.floor(middleIndex));
+}
 findMiddleIndex("Hello");  // => 2
 findMiddleIndex("Hello World");  // => 5
 
