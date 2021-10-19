@@ -14,7 +14,8 @@ Your script must have:
     Based on the operation entered by the user, you will call one of your 4 functions to perform the correct operation
     You will then print to the console: The result is: [the result]
 */
-var readlineSync = require('readline-sync');
+
+const readlineSync = require('readline-sync');
 
 var firstNum = readlineSync.questionInt("Please enter your first number: ");
 var secondNum = readlineSync.questionInt("Please enter your second number: ");
@@ -40,19 +41,19 @@ function myDivision(num1, num2){
 function customCalculator(num1, num2, myOperation){
     if (myOperation == "add"){
         //call the addition function
-        console.log("Number-1: " + num1 + " added with Number-2: " + num2 + " returns: " + myAddition(num1, num2));
+        console.log("Number-1: " + num1 + " added with Number-2: " + num2 + " the result is: " + myAddition(num1, num2));
     
     }else if (myOperation == "sub"){
         //call the subtraction function
-        console.log("Number-1: " + num1 + " subtracted from Number-2: " + num2 + " returns: " + mySubtraction(num1, num2));
+        console.log("Number-1: " + num1 + " subtracted from Number-2: " + num2 + " the result is: " + mySubtraction(num1, num2));
 
     }else if (myOperation == "mul"){
         //call the multiplication function
-        console.log("Number-1: " + num1 + " multiplied with Number-2: " + num2 + " returns: " + myMultiplication(num1, num2));
+        console.log("Number-1: " + num1 + " multiplied with Number-2: " + num2 + " the result is: " + myMultiplication(num1, num2));
     
     }else if (myOperation == "div"){
         //call if the division function
-        console.log("Number-1: " + num1 + " divided by Number-2: " + num2 + " returns: " + myDivision(num1, num2));
+        console.log("Number-1: " + num1 + " divided by Number-2: " + num2 + " the result is: " + myDivision(num1, num2));
     
     }else{
         //User provide a different operation function
