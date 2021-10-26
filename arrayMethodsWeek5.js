@@ -19,8 +19,8 @@ function arrayExcercise(){
     //console.log("fruit: ", fruit);
 
 //5. Use the length property to find the length of the vegetable array.
-    vegetables.length();
-    console.log("vegetables: ", vegetables);
+    var veggieLength = vegetables.length();
+    console.log(veggieLength);
 
 //6. Add that number to the end of the vegetable array.
 //7. Put the two arrays together into one array. Fruit first. Call the new Array "food".
