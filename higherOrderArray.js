@@ -183,8 +183,8 @@ console.log(total([1, 2, 3]));  // Output: 6
 
 function stringConcat(arr)
 {
-    const result = arr.reduce(function(num){ 
-        return num.toString() + num.toString() + num.toString() +;
+    const result = arr.reduce(function(str){ 
+        return str.toString();
     });
     return result;
 }
