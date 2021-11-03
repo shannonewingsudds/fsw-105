@@ -29,12 +29,14 @@ function evensOnly(arr)
 console.log("--- Array Filter #2 ---");
 console.log(evensOnly([3, 6, 8, 2]));  // Output: [6, 8, 2]
 
-//CHECK!!!!//Section A: Extra Credit: Make a filtered list of all the people who are old enough to see The Matrix (17+).
+//Section A: Extra Credit: Make a filtered list of all the people who are old enough to see The Matrix (17+).
 
-function ofAge(arr){
-    const result = arr.filter(function(string){
-        if (age >= 17);
-        return true;
+//!!!I tried so hard to do this one with no luck can you teel me what I am doing wrong!!!
+
+function ofAge(arr)
+{
+    const result = arr.filter(function(person){
+        return person.age >= 17;
     });
     return result;
 }
@@ -94,77 +96,6 @@ console.log(capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"]));
 //Output: ["John", "Jacob", "Jingleheimer", "Schmidt"]
 
 
-// Section B: Extra Credit 1: Make an array of strings of the names.
-
-function namesOnly(arr){
-    //your code here
-    
-}
-
-console.log("---  Array Map Extra Credit #1 ---");
-console.log(namesOnly([
-    {
-        names: "Angelina Jolie",
-        age: 80
-    },
-    {
-        names: "Eric Jones",
-        age: 2
-    },
-    {
-        names: "Paris Hilton",
-        age: 5
-    },
-    {
-        names: "Kanye West",
-        age: 16
-    },
-    {
-        names: "Bob Ziroll",
-        age: 100
-    },
-]));
-//Output: 
-// [ "Angelina Jolie", "Eric Jones", "Paris Hilton", "Kanye West", "Bob Ziroll" ]
-
-// Section B: Extra Credit 2: Make an array of strings of the names saying whether or not they can go to The Matrix.
-
-function makeStrings(arr){
-    //your code here
-    
-}
-
-console.log("---  Array Map Extra Credit #2 ---");
-console.log(makeStrings([
-    {
-        names: "Angelina Jolie",
-        age: 80
-    },
-    {
-        names: "Eric Jones",
-        age: 2
-    },
-    {
-        names: "Paris Hilton",
-        age: 5
-    },
-    {
-        names: "Kanye West",
-        age: 16
-    },
-    {
-        names: "Bob Ziroll",
-        age: 100
-    },
-]));
-//Output: 
-// [ "Angelina Jolie can go to The Matrix",
-// "Eric Jones is under age!!",
-// "Paris Hilton is under age!!"
-// "Kanye West is under age!!"
-// "Bob Ziroll can go to The Matrix" ]
-
-
 // Section C.1: Turn an array of numbers into a total of all the numbers
 
 function total(arr)
@@ -179,12 +110,12 @@ function total(arr)
 console.log("---  Array Reduce #1 ---");
 console.log(total([1, 2, 3]));  // Output: 6
 
-//CHECK!!!// Section C.2: Turn an array of numbers into a long string of all those numbers.
+// Section C.2: Turn an array of numbers into a long string of all those numbers.
 
 function stringConcat(arr)
 {
-    const result = arr.reduce(function(str){ 
-        return str.toString();
+    const result = arr.reduce(function(num1, num2,){ 
+        return num1.toString() + num2.toString();
     });
     return result;
 }
@@ -195,14 +126,12 @@ console.log(stringConcat([1, 2, 3]));   // Output: "123"
 //Section C.3: Turn an array of voter objects into a count of how many people voted.  Note: You don't necessarily have to use 
 //reduce for this, so try to think of multiple ways you could solve this.
 
-function totalVoters(arr)
-{
-    const result = arr.reduce(function(voted){
-        if (voted === True)
-        return voted;
-    });
+    
+function totalVoters(arr){
+    result = voters.filter(person => person.voted).length;  
+
     return result;
-}
+}   
 const voters = [
     {name: 'Bob' , age: 30, voted: true},
     {name: 'Jake' , age: 32, voted: true},
@@ -221,41 +150,6 @@ const voters = [
 
 console.log("---  Array Reduce #3 ---")
 console.log( totalVoters(voters) );  // Output: 7
-
-// Section C: Extra Credit 1: Given an array of all your wish list items, return the total cost of all items. 
-
-function shoppingSpree(arr)
-{
-    //your code here
-    
-}
-
-const wishlist = [
-    { title: "Telsa Model S", price: 90000},
-    { title: "4 carat diamond ring", price: 45000},
-    { title: "Fancy hacky Sack", price: 5},
-    { title: "Gold fidget spinner", price: 2000},
-    { title: "A second Tesla Model S", price: 90000},
-];
-
-console.log("---  Array Reduce Extra Credit #1 ---");
-console.log( shoppingSpree(wishlist) );  // Output: 227005
-
-// Section C: Extra Credit 2: Given an array of arrays, flatten them into a single array.
-
-function flatten(arr) {
-    //your code here 
-    
-}
-
-const arrays = [
-    ["1", "2", "3"],
-    [true],
-    [4, 5, 6]
-];
-
-console.log("---  Array Reduce Extra Credit #2 ---");
-console.log(flatten(arrays));  // Output: ["1", "2", "3", true, 4, 5, 6];
 
 
 // Section D.1: Sort an array from smallest number to largest.
@@ -285,20 +179,13 @@ console.log(greatestToLeast([1, 3, 5, 2, 90, 20]));  // Output: [90, 20, 5, 3, 2
 // Section D.3: Sort an array from shortest string to longest. 
 
 function lengthSort(arr) {
-    //your code here 
+    const result = arr.sort(function (str1, str2){
+        return str1.length - str2.length;
+    });
+    return result;
     
 }
 
 console.log("---  Array Sort #3 ---")
 console.log(lengthSort(["dog", "wolf", "by", "family", "eaten"]));  // Output: ["by", "dog", "wolf", "eaten", "family"]
-
-// Section D: Extra Credit 1: Given an array of arrays, flatten them into a single array.
-
-function alphabetical(arr){
-    //your code here 
-    
-}
-
-console.log("---  Array Sort Extra Credt ---");
-console.log(alphabetical(["dog", "wolf", "by", "family", "eaten"]));  // Output: ["by", "dog", "eaten", "family", "wolf"]
 
