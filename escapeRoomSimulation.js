@@ -28,11 +28,11 @@ while(isAlive == true) {
 
     }else if (menuSelction == 3 && hasKey == false){
         //player has not found the key
-        console.log(`${playerName}, you have found the keyto be able to escape the room successfully,  but you will need to find the key by visiting menu option 2 first.`);
+        console.log(`${playerName}, to be able to escape the room successfully, you will need to find the key by visiting menu option 2 first.`);
 
     }else if (menuSelction == 3 && hasKey == true){
         //player has found the key, exitx successfully, game over
-        console.log(`Great job, ${playerName}, you have found the key successfully, and you have opened the exit dooe successfully. `);
+        console.log(`Great job, ${playerName}, you have found the key successfully, and you have opened the exit door successfully. `);
         console.log(`Congratulations, ${playerName}, you escaped the game room successfully! Great Job! `);
         isAlive = false;
     }
