@@ -28,7 +28,7 @@ while(isAlive == true) {
 
     }else if (menuSelction == 3 && hasKey == false){
         //player has not found the key
-        console.log(`${playerName}, you have found the keyto be able to escape the room successfully, Pyou will need to find the key by visiting menu option 2 first.`);
+        console.log(`${playerName}, you have found the keyto be able to escape the room successfully,  but you will need to find the key by visiting menu option 2 first.`);
 
     }else if (menuSelction == 3 && hasKey == true){
         //player has found the key, exitx successfully, game over
