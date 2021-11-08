@@ -1,36 +1,3 @@
-function Employees(){
-    //use the "this" keyword to reference each object
-    //that is created from this constructor
-    this.name = "Karen Millen";
-    this.jobTitle = "Director";
-    this.salary = "$125,000";
-}
-Employees.prototype.status = function (){
-    console.log("Full Time");
-};
-console.log(Employees.prototype);
-console.log(proto.constructor);
-//We "instantiate" (create a new object from) our constructor with
-//the "new" keyword and pass in the parameters
-
-const Employees1 = new Employees("Kate Spade " , "President ", "$200,000 ");
-const Employees2 = new Employees("Louis Vuitton " , "Vice President ", "$150,000 ");
-const Employees3 = new Employees("Jimmy Choo " , "Chief Finance Offer ", "$100,000 ");
-
-Employees.prototype.printEmployeeForm = function(){
-    console.log("Name: ", + Employees.name + " Job Title: " + Employees.jobTitle + "Salary: ",  + Employees.salary);
-}
-
-printEmployeeForm(Employees1);
-printEmployeeForm(Employees2);
-printEmployeeForm(Employees3);
-
-//Employees1.printEmployeeForm();
-//Employees2.printEmployeeForm();
-//Employees3.printEmployeeForm();
-
-
-
 /*You are to create a collection of employee's information for your company. Each employee has the following attributes:
 
     Name
@@ -53,3 +20,25 @@ You will then:
     Call the printEmployeeForm method for each employee
     Put the generated employees into the employees array using whichever method you prefer.
 */
+
+const employees = []
+
+const Employee1 = new Employee("Kate Spade " , "President ", "$200,000 ");
+const Employee2 = new Employee("Louis Vuitton " , "Vice President ", "$150,000 ");
+const Employee3 = new Employee("Jimmy Choo " , "Chief Finance Offer ", "$100,000 ", "Contract");
+
+function Employee(name, jobTitle, salary, status = "Full Time") {
+    this.name = name;
+    this.jobTitle = jobTitle;
+    this.salary = salary;
+    this.status = status;
+};
+Employee.prototype.printEmployeeForm = function () {
+    console.log("Name: " +  this.name + ",Job Title: " + this.jobTitle + ",Salary: " + this.salary + ",Status: " + this.status);
+};
+
+Employee1.printEmployeeForm();
+Employee2.printEmployeeForm();
+Employee3.printEmployeeForm();
+
+employees.push(Employee1, Employee2, Employee3);
